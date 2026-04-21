@@ -1,0 +1,1 @@
+C:/Users/ADMINI~1/AppData/Local/Temp/7zE8908F08D/home/nx/.config/mpv/scripts/thumbfast_repo/thumbfast.lua

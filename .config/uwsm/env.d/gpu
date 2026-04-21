@@ -1,0 +1,14 @@
+# -----------------------------------------------------------------
+# UWSM GPU Config | Mode: SINGLE
+# Primary DRM node: /dev/dri/card1
+# Primary GPU: AMD | Advanced Micro Devices, Inc. [AMD/ATI] Navi 31 [Radeon RX 7900 XT/7900 XTX/7900 GRE/7900M] (rev cc) | 0000:03:00.0
+# -----------------------------------------------------------------
+export ELECTRON_OZONE_PLATFORM_HINT=auto
+export MOZ_ENABLE_WAYLAND=1
+
+# Hyprland / Aquamarine GPU priority
+# Resolved dynamically at session start to avoid colon-parsing bugs.
+export AQ_DRM_DEVICES="$(readlink -f -- '/dev/dri/by-path/pci-0000:03:00.0-card')"
+
+# AMD Media Session
+export LIBVA_DRIVER_NAME=radeonsi
